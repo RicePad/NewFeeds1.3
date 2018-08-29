@@ -4,16 +4,16 @@
 
     <ListPreference
         android:defaultValue="@string/order_by_default"
-        android:entries="@array/settings_order_by_labels"
-        android:entryValues="@array/settings_order_by_values"
+        android:entries="@array/order_by_labels"
+        android:entryValues="@array/order_by_values"
         android:key="@string/order_by_key"
         android:title="@string/order_by_label" />
 
     <EditTextPreference
-        android:defaultValue="@string/settings_max_articles_default"
+        android:defaultValue="@string/max_newsfeeds_default"
         android:inputType="number"
-        android:key="@string/settings_max_articles_key"
+        android:key="@string/max_newsfeeds_key"
         android:selectAllOnFocus="true"
-        android:title="@string/settings_max_articles_label" />
+        android:title="@string/max_newsfeeds_label" />
 
 </PreferenceScreen>

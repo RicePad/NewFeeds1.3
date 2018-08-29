@@ -9,7 +9,7 @@
     <string name="order_by_key" translatable="false">order_by</string>
     <string name="order_by_default" translatable="false">@string/order_by_newest_default</string>
 
-    <!-- Strings For Max Article Preference [CHAR LIMIT=30] -->
+    <!-- Strings For Max newsfeeds Preference [CHAR LIMIT=30] -->
     <string name="max_newsfeeds_label">Maximum Number of Newsfeed</string>
     <string name="max_newsfeeds_key" translatable="false">max_newsfeeds</string>
     <string name="max_newsfeeds_default" translatable="false">10</string>
@@ -27,13 +27,13 @@
     <string name="order_by_relevance_label">Relevance</string>
     <string name="order_by_relevance_value" translatable="false">relevance</string>
 
-    <string-array name="settings_order_by_labels">
+    <string-array name="order_by_labels">
         <item>@string/order_by_newest_label</item>
         <item>@string/order_by_oldest_label</item>
         <item>@string/order_by_relevance_label</item>
     </string-array>
 
-    <string-array name="settings_order_by_values">
+    <string-array name="order_by_values">
         <item>@string/order_by_newest_value</item>
         <item>@string/order_by_oldest_value</item>
         <item>@string/order_by_relevance_value</item>

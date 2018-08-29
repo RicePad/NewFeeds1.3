@@ -111,11 +111,11 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
         SharedPreferences sharePrefs = PreferenceManager.getDefaultSharedPreferences(this);
         String maxNewsfeeds = sharePrefs.getString(
-                getString(R.string.settings_max_articles_key),
-                getString(R.string.settings_max_articles_default));
+                getString(R.string.max_newsfeeds_key),
+                getString(R.string.max_newsfeeds_default));
         String organizeBy = sharePrefs.getString(
-                getString(R.string.settings_order_by_key),
-                getString(R.string.settings_order_by_default));
+                getString(R.string.order_by_key),
+                getString(R.string.order_by_default));
         Uri baseUri = Uri.parse(GUARDIAN_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
         uriBuilder.appendQueryParameter("page-size", maxNewsfeeds)
