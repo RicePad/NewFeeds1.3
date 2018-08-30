@@ -14,16 +14,16 @@
     <string name="max_newsfeeds_key" translatable="false">max_newsfeeds</string>
     <string name="max_newsfeeds_default" translatable="false">10</string>
 
-    <!-- Label for order-by newest option [CHAR LIMIT=20] -->
+    <!--  order-by newest option [CHAR LIMIT=20] -->
     <string name="order_by_newest_label">Newest</string>
     <string name="order_by_newest_value" translatable="false">newest</string>
     <string name="order_by_newest_default" translatable="false">newest</string>
 
-    <!-- Label for order-by oldest option [CHAR LIMIT=20] -->
+    <!--  oldest option [CHAR LIMIT=20] -->
     <string name="order_by_oldest_label">Oldest</string>
     <string name="order_by_oldest_value" translatable="false">oldest</string>
 
-    <!-- Label for order-by section option [CHAR LIMIT=20] -->
+    <!-- order-by section option [CHAR LIMIT=20] -->
     <string name="order_by_relevance_label">Relevance</string>
     <string name="order_by_relevance_value" translatable="false">relevance</string>
 

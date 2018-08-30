@@ -33,6 +33,12 @@
                 android:layout_gravity="end"/>
             <TextView
                 style="@style/textViewSection"
+                android:id="@+id/author_section"
+                android:textStyle="bold"
+                tools:text="Author's name"
+                android:textColor="@color/colorPrimaryDark"/>
+            <TextView
+                style="@style/textViewSection"
                 android:id="@+id/newsfeed_section_text_view"
                 android:textStyle="bold"
                 tools:text="newsfeed section"

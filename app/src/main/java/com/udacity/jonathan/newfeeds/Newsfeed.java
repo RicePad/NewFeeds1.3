@@ -1,5 +1,7 @@
 package com.udacity.jonathan.newfeeds;
 
+import java.util.ArrayList;
+
 public class Newsfeed {
 
     /** NewssFeed Tittle */
@@ -14,11 +16,14 @@ public class Newsfeed {
     /** Publication date of the newsfeed */
     private long mDateTime;
 
-    public Newsfeed(String title, String url, String section, long dateTime) {
+    private ArrayList<String> mAuthors;
+
+    public Newsfeed(String title, String url, String section, long dateTime, ArrayList<String> authors) {
         mTitle = title;
         mUrl = url;
         mSection = section;
         mDateTime = dateTime;
+        mAuthors = authors;
     }
 
     public String getNewsfeedTitle(){
@@ -36,5 +41,7 @@ public class Newsfeed {
     public long getDateTime(){
         return mDateTime;
     }
+
+    public ArrayList<String> getAuthors() { return mAuthors; }
 
 }

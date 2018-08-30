@@ -161,11 +161,18 @@ public class QueryUtils {
                 String section = currentNewsfeed.optString("sectionName");
                 long dateTime = new DateTime(currentNewsfeed.optString("webPublicationDate")).getMillis();
 
+                // For each Newsfeed in the authors Array, create an {@link Newsfeed} object
+                JSONArray tags = currentNewsfeed.optJSONArray("tags");
+                ArrayList<String> authors = new ArrayList<>();
 
+                for (int j = 0; j < tags.length(); j++) {
+                    JSONObject author = tags.optJSONObject(j);
+                    authors.add(author.optString("webTitle"));
+                }
 
                 // Create a new {@link Newsfeed} object title, link, date
                 // and url from the JSON response.
-                Newsfeed newsfeed = new Newsfeed(title, link, section, dateTime );
+                Newsfeed newsfeed = new Newsfeed(title, link, section, dateTime, authors );
 
                 // Add the new {@link Newsfeed} to the list of Newsfeeds.
                 newsfeeds.add(newsfeed);
