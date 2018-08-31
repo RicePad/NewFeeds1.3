@@ -5,12 +5,10 @@ import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
-import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
     /** Adapter for the list of newsfeed */
     private NewsfeedAdapter mAdapter;
 
-//    /** TextView that is displayed when the list is empty */
+    //    /** TextView that is displayed when the list is empty */
     private TextView mEmptyStateTextView;
 
     @Override
@@ -108,21 +106,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
     @Override
     public Loader<List<Newsfeed>> onCreateLoader(int i, Bundle bundle) {
         // Create a new loader for the given URL
-
-        SharedPreferences sharePrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String maxNewsfeeds = sharePrefs.getString(
-                getString(R.string.max_newsfeeds_key),
-                getString(R.string.max_newsfeeds_default));
-        String organizeBy = sharePrefs.getString(
-                getString(R.string.order_by_key),
-                getString(R.string.order_by_default));
-        Uri baseUri = Uri.parse(GUARDIAN_REQUEST_URL);
-        Uri.Builder uriBuilder = baseUri.buildUpon();
-        uriBuilder.appendQueryParameter("page-size", maxNewsfeeds)
-                .appendQueryParameter("order-by", organizeBy);
-        return new NewsfeedLoader(this, uriBuilder.toString());
-
-
+        return new NewsfeedLoader(this, GUARDIAN_REQUEST_URL);
     }
 
     @Override

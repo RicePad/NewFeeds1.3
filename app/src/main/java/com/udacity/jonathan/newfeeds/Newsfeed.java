@@ -16,14 +16,14 @@ public class Newsfeed {
     /** Publication date of the newsfeed */
     private long mDateTime;
 
-    private ArrayList<String> mAuthors;
+    private String mAuthor;
 
-    public Newsfeed(String title, String url, String section, long dateTime, ArrayList<String> authors) {
+    public Newsfeed(String title, String url, String section, long dateTime, String author) {
         mTitle = title;
         mUrl = url;
         mSection = section;
         mDateTime = dateTime;
-        mAuthors = authors;
+        mAuthor = author;
     }
 
     public String getNewsfeedTitle(){
@@ -42,6 +42,6 @@ public class Newsfeed {
         return mDateTime;
     }
 
-    public ArrayList<String> getAuthors() { return mAuthors; }
+    public String getAuthor() { return mAuthor; }
 
 }
